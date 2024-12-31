@@ -1,0 +1,294 @@
+/* Importing Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
+
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Custom Properties */
+:root {
+  --primary-color: #007bff; /* Blue */
+  --primary-light: #cfe2ff; /* Light Blue */
+  --secondary-color: #0056b3; /* Darker Blue */
+  --danger-color: #dc3545; /* Red */
+  --white: #ffffff; /* White */
+  --light-gray: #f8f9fa; /* Light Gray */
+  --gray: #d3d3d3; /* Medium Gray */
+  --dark-gray: #343a40; /* Dark Gray */
+  --text-color: #212529; /* Default Text Color */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.25rem;
+  --spacing-xl: 2rem;
+  --border-radius: 0.375rem; /* Bootstrap default */
+  --font-family: "Inter", sans-serif;
+}
+
+/* Global Styles */
+body {
+  font-family: var(--font-family);
+  background-color: var(--light-gray);
+  color: var(--text-color);
+  line-height: 1.5;
+}
+
+/* Headings */
+h1,
+h2,
+h3 {
+  margin-bottom: var(--spacing-sm);
+}
+
+h1 {
+  font-size: 2rem;
+  color: var(--dark-gray);
+}
+
+h2 {
+  font-size: 1.75rem;
+  color: var(--dark-gray);
+}
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-lg);
+  background-color: var(--primary-color);
+  color: var(--white);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.navbar-links {
+  display: flex;
+}
+
+.navbar-item {
+  color: var(--white);
+  text-decoration: none;
+  margin-left: var(--spacing-lg);
+  transition: color 0.3s;
+}
+
+.navbar-item:hover {
+  color: var(--primary-light);
+}
+
+/* Home Styles */
+.home-container {
+  text-align: center;
+  padding: var(--spacing-xl);
+}
+
+.hero {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.hero-title {
+  font-size: 2.5rem;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+}
+
+/* Features Section */
+.features {
+  margin-top: var(--spacing-lg);
+}
+
+.features-title {
+  font-size: 1.5rem;
+}
+
+/* Not Found Styles */
+.not-found-container {
+  text-align: center;
+  padding: var(--spacing-xl);
+}
+
+.not-found-container h1 {
+  font-size: 2rem;
+  color: var(--danger-color);
+  margin-bottom: var(--spacing-md);
+}
+
+.not-found-container button {
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: none;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1rem;
+}
+
+.not-found-container button:hover {
+  background-color: var(--secondary-color);
+}
+
+/* Add and Edit Students Form Styles */
+form {
+  background-color: var(--white);
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius);
+  margin: var(--spacing-lg) auto;
+  max-width: 600px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+form div {
+  margin-bottom: var(--spacing-md);
+}
+
+form label {
+  display: block;
+  margin-bottom: var(--spacing-xs);
+  font-weight: 600;
+}
+
+form input,
+form select {
+  width: 100%;
+  padding: var(--spacing-sm);
+  border: 1px solid var(--gray);
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+}
+
+form input:focus,
+form select:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
+
+form button {
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: none;
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-size: 1rem;
+}
+
+form button:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-2px);
+}
+
+/* Student List Table Styles */
+#table-student {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: var(--spacing-md);
+}
+
+#table-student th,
+#table-student td {
+  padding: var(--spacing-md);
+  border: 1px solid var(--gray);
+  text-align: left;
+}
+
+#table-student th {
+  background-color: var(--light-gray);
+  font-weight: bold;
+}
+
+.student-data-row:nth-child(even) {
+  background-color: var(--white); /* Even rows */
+}
+
+.student-data-row:nth-child(odd) {
+  background-color: var(--primary-light); /* Odd rows */
+}
+
+.student-data-row:hover {
+  background-color: var(--primary-light);
+}
+
+.student-data-row td a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.student-data-row td a:hover {
+  text-decoration: underline;
+}
+
+/* Delete Button Styles */
+button[data-testid^="delete-"] {
+  background-color: var(--danger-color);
+  color: var(--white);
+  border: none;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-size: 0.875rem; /* Slightly smaller font size */
+}
+
+button[data-testid^="delete-"]:hover {
+  background-color: darkred; /* Darker shade for hover */
+  transform: translateY(-1px);
+}
+
+/* Edit Student Styles */
+.edit-student-container {
+  text-align: center;
+}
+
+.edit-student-container img {
+  max-width: 150px;
+  border-radius: var(--border-radius);
+  margin-bottom: var(--spacing-md);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+  }
+
+  .navbar-item {
+    margin-left: 0;
+    margin-top: var(--spacing-sm);
+  }
+
+  .home-container,
+  .features,
+  .not-found-container {
+    padding: var(--spacing-md);
+  }
+
+  form {
+    padding: var(--spacing-md);
+  }
+
+  form button {
+    padding: var(--spacing-sm) var(--spacing-lg);
+  }
+}
